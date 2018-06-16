@@ -8,8 +8,8 @@ services:
     depends_on:
       - db
     environment:
-      WEB_DOCUMENT_ROOT: /srv/web
-      WEB_DOCUMENT_INDEX: app.php
+      WEB_DOCUMENT_ROOT: /srv/public
+      WEB_DOCUMENT_INDEX: index.php
       PHP_DATE_TIMEZONE: "UTC"
     working_dir: /srv
     volumes:
