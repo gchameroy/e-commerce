@@ -13,5 +13,9 @@ cache:
 install:
   - composer install --no-progress --no-interaction --prefer-dist --no-suggest
 
-before_script: ~
-script: ~
+before_script:
+  - php bin/console doctrine:database:create
+  - php bin/console doctrine:schema:update --force
+
+script:
+  - vendor/bin/codecept run
