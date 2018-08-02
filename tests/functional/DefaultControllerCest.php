@@ -6,9 +6,9 @@ class DefaultControllerCest
 {
     public function tryDefault(FunctionalTester $I)
     {
-        $I->amOnPage('/default');
+        $I->amOnPage('/');
         $I->seeResponseCodeIs(HttpCode::OK);
-        $I->seeCurrentUrlEquals('/default');
-        $I->see('Hello DefaultController!', 'h1');
+        $I->seeCurrentUrlEquals('/');
+        $I->see('Home', 'a');
     }
 }
