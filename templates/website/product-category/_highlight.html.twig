@@ -3,12 +3,9 @@
         <div class="category-menu text-center">
             <h2 class="category-title">{{ category.label }}</h2>
             <ul>
-                <li><a href="#">Down Jackets</a></li>
-                <li><a href="#">T Shirts</a></li>
-                <li><a href="#">Jeans</a></li>
-                <li><a href="#">Casual Pants</a></li>
-                <li><a href="#">Sunglasses</a></li>
-                <li><a href="#">Hoodies</a></li>
+                {% for subCategory in category.subCategories %}
+                    <li><a href="#">{{ subCategory.label }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="category-Slider">
