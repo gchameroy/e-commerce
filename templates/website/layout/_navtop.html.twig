@@ -12,13 +12,10 @@
         <div class="navTop-middle">
             <div class="filterArea d-none d-lg-block">
                 <select name="guiest_id1" id="guiest_id1" class="select-drop">
-                    <option value="0">All Categories</option>
-                    <option value="1">Fashion</option>
-                    <option value="2">Accessories</option>
-                    <option value="3">Electronics</option>
-                    <option value="4">Cosmetic</option>
-                    <option value="5">Mobile</option>
-                    <option value="6">Computer</option>
+                    <option value="">All Categories</option>
+                    {% for category in categories %}
+                        <option value="{{ category.slug }}">{{ category.label }}</option>
+                    {% endfor %}
                 </select>
             </div>
             <div class="searchBox">

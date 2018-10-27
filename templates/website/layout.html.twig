@@ -15,8 +15,8 @@
             {% include 'website/layout/_preloader.html.twig' %}
             <div class="header clearfix headerV3">
                 {% include 'website/layout/_topbar.html.twig' %}
-                {% include 'website/layout/_navtop.html.twig' %}
-                {% include 'website/layout/_navbar.html.twig' %}
+                {{ render(controller('App\\Controller\\LayoutController::navtop')) }}
+                {{ render(controller('App\\Controller\\LayoutController::navbar')) }}
             </div>
 
             {% include 'website/layout/_banner.html.twig' %}
