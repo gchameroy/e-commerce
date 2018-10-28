@@ -10,13 +10,12 @@
         {% include 'website/layout/_style.html.twig' %}
     </head>
 
-    <body class="body-wrapper">
+    <body class="body-wrapper static">
         <div class="main-wrapper">
             {% include 'website/layout/_preloader.html.twig' %}
             <div class="header clearfix headerV3">
                 {% include 'website/layout/_topbar.html.twig' %}
                 {{ render(controller('App\\Controller\\LayoutController::navtop')) }}
-                {{ render(controller('App\\Controller\\LayoutController::navbar')) }}
             </div>
 
             {% include 'website/layout/_banner.html.twig' %}
