@@ -679,7 +679,7 @@ body.loaded {
 }
 
 .topBar ul.float-right > li.cart-dropdown {
-  margin-left: 3px;
+  margin-left: 15px;
 }
 
 .topBar ul.float-right > li:nth-child(2)::before {
@@ -1020,6 +1020,7 @@ body.loaded {
 }
 
 .navbar-default .navbar-toggler {
+  cursor: pointer;
   background-color: #47bac1;
   border-radius: 0;
   border: none;
