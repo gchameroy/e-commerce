@@ -1,0 +1,121 @@
+App\Entity\ProductModel:
+  product_1_model_1:
+    label: 'TEE-SHIRT TERZO - NOIR'
+    price: 11.5
+    reference: 'PWOJEA1_XNO'
+    product: '@product_1'
+  product_1_model_2:
+    label: 'TEE-SHIRT TERZO - Blanc'
+    price: 11.5
+    reference: 'PWOJEA1_XBL'
+    product: '@product_1'
+  product_2_model_1:
+    label: 'TEE-SHIRT col rond - NOIR'
+    price: 11.5
+    reference: 'PWOJEA2_XNO'
+    product: '@product_2'
+  product_2_model_2:
+    label: 'TEE-SHIRT col rond - Blanc'
+    price: 11.5
+    reference: 'PWOJEA2_XBL'
+    product: '@product_2'
+  product_3_model_1:
+    label: 'TEE-SHIRT col V - NOIR'
+    price: 11.5
+    reference: 'PWOJEA3_XNO'
+    product: '@product_3'
+  product_3_model_2:
+    label: 'TEE-SHIRT col V - Blanc'
+    price: 11.5
+    reference: 'PWOJEA1_XBL'
+    product: '@product_3'
+  product_4_model_1:
+    label: 'JEAN TERZO - NOIR'
+    price: 11.5
+    reference: 'PWOJEA4_XNO'
+    product: '@product_4'
+  product_4_model_2:
+    label: 'JEAN TERZO - Blanc'
+    price: 11.5
+    reference: 'PWOJEA4_XBL'
+    product: '@product_4'
+  product_5_model_1:
+    label: 'JEAN stretch - NOIR'
+    price: 11.5
+    reference: 'PWOJEA5_XNO'
+    product: '@product_5'
+  product_5_model_2:
+    label: 'JEAN stretch - Blanc'
+    price: 11.5
+    reference: 'PWOJEA5_XBL'
+    product: '@product_5'
+  product_6_model_1:
+    label: 'JEAN standard - NOIR'
+    price: 11.5
+    reference: 'PWOJEA6_XNO'
+    product: '@product_6'
+  product_6_model_2:
+    label: 'JEAN standard - Blanc'
+    price: 11.5
+    reference: 'PWOJEA6_XBL'
+    product: '@product_6'
+  product_7_model_1:
+    label: 'TEE-SHIRT TERZO - NOIR'
+    price: 11.5
+    reference: 'PMEJEA7_XNO'
+    product: '@product_7'
+  product_7_model_2:
+    label: 'TEE-SHIRT TERZO - Blanc'
+    price: 11.5
+    reference: 'PMEJEA7_XBL'
+    product: '@product_7'
+  product_8_model_1:
+    label: 'TEE-SHIRT col rond - NOIR'
+    price: 11.5
+    reference: 'PMEJEA8_XNO'
+    product: '@product_8'
+  product_8_model_2:
+    label: 'TEE-SHIRT col rond - Blanc'
+    price: 11.5
+    reference: 'PMEJEA8_XBL'
+    product: '@product_8'
+  product_9_model_1:
+    label: 'TEE-SHIRT col V - NOIR'
+    price: 11.5
+    reference: 'PMEJEA9_XNO'
+    product: '@product_9'
+  product_9_model_2:
+    label: 'TEE-SHIRT col V - Blanc'
+    price: 11.5
+    reference: 'PMEJEA9_XBL'
+    product: '@product_9'
+  product_10_model_1:
+    label: 'JEAN TERZO - NOIR'
+    price: 11.5
+    reference: 'PMEJEA10_XNO'
+    product: '@product_10'
+  product_10_model_2:
+    label: 'JEAN TERZO - Blanc'
+    price: 11.5
+    reference: 'PMEJEA10_XBL'
+    product: '@product_10'
+  product_11_model_1:
+    label: 'JEAN stretch - NOIR'
+    price: 11.5
+    reference: 'PMEJEA11_XNO'
+    product: '@product_11'
+  product_11_model_2:
+    label: 'JEAN stretch - Blanc'
+    price: 11.5
+    reference: 'PMEJEA11_XBL'
+    product: '@product_11'
+  product_12_model_1:
+    label: 'JEAN standard - NOIR'
+    price: 11.5
+    reference: 'PMEJEA12_XNO'
+    product: '@product_12'
+  product_12_model_2:
+    label: 'JEAN standard - Blanc'
+    price: 11.5
+    reference: 'PMEJEA12_XBL'
+    product: '@product_12'

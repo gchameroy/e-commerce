@@ -1,0 +1,73 @@
+App\Entity\Product:
+  product_1:
+    label: 'TEE-SHIRT TERZO'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_1_model_1'
+    subCategory: '@product_sub_category_women_1'
+  product_2:
+    label: 'TEE-SHIRT col rond'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_2_model_1'
+    subCategory: '@product_sub_category_women_1'
+  product_3:
+    label: 'TEE-SHIRT col V'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_3_model_1'
+    subCategory: '@product_sub_category_women_1'
+  product_4:
+    label: 'JEAN TERZO'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_4_model_1'
+    subCategory: '@product_sub_category_women_2'
+  product_5:
+    label: 'JEAN stretch'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_5_model_1'
+    subCategory: '@product_sub_category_women_2'
+  product_6:
+    label: 'JEAN standard'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_6_model_1'
+    subCategory: '@product_sub_category_women_2'
+  product_7:
+    label: 'TEE-SHIRT TERZO'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_7_model_1'
+    subCategory: '@product_sub_category_men_1'
+  product_8:
+    label: 'TEE-SHIRT col rond'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_8_model_1'
+    subCategory: '@product_sub_category_men_1'
+  product_9:
+    label: 'TEE-SHIRT col V'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_9_model_1'
+    subCategory: '@product_sub_category_men_1'
+  product_10:
+    label: 'JEAN TERZO'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_10_model_1'
+    subCategory: '@product_sub_category_men_2'
+  product_11:
+    label: 'JEAN stretch'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_11_model_1'
+    subCategory: '@product_sub_category_men_2'
+  product_12:
+    label: 'JEAN standard'
+    description: <text()>
+    detail: <text()>
+    defaultModel: '@product_12_model_1'
+    subCategory: '@product_sub_category_men_2'

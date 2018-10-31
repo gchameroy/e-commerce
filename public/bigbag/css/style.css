@@ -4590,7 +4590,7 @@ body.bodyColor.container {
 
 @media (min-width: 992px) {
   .category-content {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 }
 
@@ -6231,6 +6231,7 @@ body.bodyColor.container {
 
 .pageHeader {
   height: 70px;
+  margin-bottom: 50px;
 }
 
 .pageHeader .page-title h2 {
@@ -6532,8 +6533,9 @@ body.bodyColor.container {
   right: 0;
 }
 
-.navbar-side-collapse .side-nav li a:hover {
-  color: #47bac1;
+.navbar-side-collapse .side-nav li a:hover,
+.navbar-side-collapse .side-nav li.selected a{
+  color: #47bac1 !important;
 }
 
 .navbar-side-collapse .side-nav li a[aria-expanded="true"] i:before {

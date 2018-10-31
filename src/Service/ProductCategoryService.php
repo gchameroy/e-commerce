@@ -12,6 +12,6 @@ class ProductCategoryService extends AbstractService
 {
     public function __construct(EntityManagerInterface $em)
     {
-        parent::__construct($em, ProductCategory::class, 'product.category');
+        parent::__construct($em, ProductCategory::class);
     }
 }

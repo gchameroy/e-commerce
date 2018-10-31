@@ -16,12 +16,14 @@
         "symfony/lts": "^4@dev",
         "symfony/orm-pack": "^1.0",
         "symfony/twig-bundle": "^4.1",
-        "symfony/yaml": "^4.1"
+        "symfony/yaml": "^4.1",
+        "twig/extensions": "^1.5"
     },
     "require-dev": {
         "codeception/codeception": "^2.4",
         "hautelook/alice-bundle": "^2.3",
         "sensiolabs/security-checker": "^4.1",
+        "symfony/debug-pack": "^1.0",
         "symfony/dotenv": "^4.1",
         "symfony/maker-bundle": "^1.5",
         "symfony/phpunit-bridge": "^4.1",
