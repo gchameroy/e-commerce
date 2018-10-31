@@ -16,13 +16,20 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a href="{{ path('default') }}" class="nav-link">Home</a>
+                    <a href="{{ path('home') }}" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item dropdown ">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
-                    <ul class="dropdown-menu dropdown-menu-left">
+                <li class="nav-item dropdown megaDropMenu active">
+                    <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Products</a>
+                    <ul class="dropdown-menu row">
                         {% for category in categories %}
-                            <li><a href="#">{{ category.label }}</a></li>
+                            <li class="col-md-3 col-12">
+                                <ul class="list-unstyled">
+                                    <li>{{ category.label }}</li>
+                                    {% for subCategory in category.subCategories %}
+                                        <li><a href="{{ path('product_list', {category: category.slug, subCategory: subCategory.slug}) }}">{{ subCategory.label }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
                         {% endfor %}
                     </ul>
                 </li>

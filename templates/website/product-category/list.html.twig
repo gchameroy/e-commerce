@@ -1,0 +1,9 @@
+{% extends 'website/layout.html.twig' %}
+{% import 'website/macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% block title 'Products - ' ~ parent() %}
+
+{% block content %}
+    {{ breadcrumb.display('Products', [{"label": "Home", "path": "home"}, {"label": "Products"}]) }}
+    {{ render(controller('App\\Controller\\ProductCategoryController::highlights')) }}
+{% endblock %}

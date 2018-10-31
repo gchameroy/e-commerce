@@ -1,0 +1,66 @@
+{% extends 'website/layout.html.twig' %}
+{% import 'website/macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% block title 'Products - ' ~ parent() %}
+
+{% block content %}
+    {{ breadcrumb.display(subCategory.label, [
+        {"label": "Home", "path": "home"},
+        {"label": "Products", "path": "product_category_list"},
+        {"label": category.label, "path": "product_category_list"},
+        {"label": subCategory.label}
+    ]) }}
+
+    <section class="mainContent clearfix productsContent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    {% include 'website/layout/_sidebar.html.twig' with {'currentSubCategory': subCategory} %}
+                </div>
+                <div class="col-lg-9 col-md-8">
+                    <div class="row filterArea">
+                        <div class="col-6">
+                            <select name="guiest_id1" id="guiest_id1" class="select-drop">
+                                <option value="0">Default sorting</option>
+                                <option value="1">Sort by popularity</option>
+                                <option value="2">Sort by rating</option>
+                                <option value="3">Sort by newness</option>
+                                <option value="3">Sort by price</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <div class="btn-group float-right" role="group">
+                                <button type="button" class="btn btn-default active" onclick="window.location.href='product-grid-left-sidebar.html'"><i class="fa fa-th" aria-hidden="true"></i><span>Grid</span></button>
+                                <button type="button" class="btn btn-default" onclick="window.location.href='product-list-left-sidebar.html'"><i class="fa fa-th-list" aria-hidden="true"></i><span>List</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="productBox">
+                                    <div class="productImage clearfix">
+                                        <img src="{{ asset('bigbag/img/products/products-01.jpg') }}" alt="products-img">
+                                        <div class="productMasking">
+                                            <ul class="list-inline btn-group" role="group">
+                                                <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                                                <li><a href="javascript:void(0);" class="btn btn-default" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                                                <li><a class="btn btn-default" data-toggle="modal" href="#" ><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="productCaption clearfix">
+                                        <a href="#">
+                                            <h5>{{ product.label }}</h5>
+                                        </a>
+                                        <h3>{{ product.defaultModel.price|localizedcurrency('USD') }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

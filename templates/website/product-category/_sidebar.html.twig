@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Product categories</div>
+    <div class="panel-body">
+        <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
+            <ul class="nav navbar-nav side-nav">
+                {% for category in categories %}
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" aria-expanded="true" data-target="#{{ category.slug }}">{{ category.label }} <i class="fa fa-plus"></i></a>
+                        <ul id="{{ category.slug }}" class="collapse collapseItem {{ category == currentSubCategory.category ? 'show' }}">
+                            {% for subCategory in category.subCategories %}
+                                <li class="{{ subCategory == currentSubCategory ? 'selected' }}">
+                                    <a href="{{ path('product_list', {category: category.slug, subCategory: subCategory.slug}) }}">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>{{ subCategory.label }} <span>({{ subCategory.products|length }})</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,76 +1,13 @@
 App\Entity\ProductSubCategory:
-  sub_men_0:
-    label: 'Down Jackets'
-    category: '@men'
-  sub_men_1:
+  product_sub_category_women_1:
     label: 'T Shirts'
-    category: '@men'
-  sub_men_2:
+    category: '@product_category_women'
+  product_sub_category_women_2:
     label: 'Jeans'
-    category: '@men'
-  sub_men_3:
-    label: 'Casual Pants'
-    category: '@men'
-  sub_men_4:
-    label: 'Sunglasses'
-    category: '@men'
-  sub_men_5:
-    label: 'Hoodies'
-    category: '@men'
-
-  sub_women_0:
-    label: 'Casual Dresses'
-    category: '@women'
-  sub_women_1:
-    label: 'Sweaters'
-    category: '@women'
-  sub_women_2:
-    label: 'Coats & Jackets'
-    category: '@women'
-  sub_women_3:
-    label: 'Cosmetic'
-    category: '@women'
-  sub_women_4:
+    category: '@product_category_women'
+  product_sub_category_men_1:
     label: 'T Shirts'
-    category: '@women'
-  sub_women_5:
-    label: 'Shoes'
-    category: '@women'
-
-  sub_jewelry_0:
-    label: 'Jewelry Sets'
-    category: '@jewelry'
-  sub_jewelry_1:
-    label: 'Earning Sets'
-    category: '@jewelry'
-  sub_jewelry_2:
-    label: 'DIY Jewelry'
-    category: '@jewelry'
-  sub_jewelry_3:
-    label: 'Pendant Necklaces'
-    category: '@jewelry'
-  sub_jewelry_4:
-    label: 'Popular Bracelets'
-    category: '@jewelry'
-  sub_jewelry_5:
-    label: 'Pendant'
-    category: '@jewelry'
-
-  sub_bags_0:
-    label: 'Women''s Boots'
-    category: '@bags'
-  sub_bags_1:
-    label: 'Women''s Casual Boots'
-    category: '@bags'
-  sub_bags_2:
-    label: 'Women''s Bags'
-    category: '@bags'
-  sub_bags_3:
-    label: 'Men''s Boots'
-    category: '@bags'
-  sub_bags_4:
-    label: 'Men''s Casual Boots'
-    category: '@bags'
-  sub_bags_5:
-    label: 'Men''s Bags'
-    category: '@bags'
+    category: '@product_category_men'
+  product_sub_category_men_2:
+    label: 'Jeans'
+    category: '@product_category_men'

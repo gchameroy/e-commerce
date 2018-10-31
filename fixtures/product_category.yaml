@@ -1,9 +1,5 @@
 App\Entity\ProductCategory:
-  men:
-    label: 'Men''s Clothing'
-  women:
+  product_category_women:
     label: 'woMen''s Clothing'
-  jewelry:
-    label: 'Jewelry Collection'
-  bags:
-    label: 'Bags & Shoes'
+  product_category_men:
+    label: 'Men''s Clothing'
