@@ -1,0 +1,13 @@
+App\Entity\Filter:
+  filter_1:
+    label: 'Black'
+    category: '@filter_category_1'
+  filter_2:
+    label: 'White'
+    category: '@filter_category_1'
+  filter_3:
+    label: 'Small'
+    category: '@filter_category_2'
+  filter_4:
+    label: 'Medium'
+    category: '@filter_category_2'

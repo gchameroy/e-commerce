@@ -1,0 +1,12 @@
+{% for filterCategory in filterCategories %}
+    <div class="panel panel-default filterNormal">
+        <div class="panel-heading">filter by {{ filterCategory.label }}</div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                {% for filter in filterCategory.filters %}
+                    {{ render(controller('App\\Controller\\FilterController:sidebar', {filter: filter, currentSubCategory: currentSubCategory})) }}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endfor %}

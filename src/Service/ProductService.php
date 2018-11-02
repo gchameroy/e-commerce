@@ -9,7 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * @method Product[] getList()
- * @method ProductRepository getRepository()()
+ * @method ProductRepository getRepository()
  */
 class ProductService extends AbstractService
 {
