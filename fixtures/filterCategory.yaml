@@ -1,0 +1,5 @@
+App\Entity\FilterCategory:
+  filter_category_1:
+    label: 'Color'
+  filter_category_2:
+    label: 'Size'

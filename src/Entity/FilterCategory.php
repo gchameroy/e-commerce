@@ -10,9 +10,9 @@ use Gedmo\SoftDeleteable\Traits\SoftDeleteableEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProductModelRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\FilterCategoryRepository")
  */
-class ProductModel
+class FilterCategory
 {
     use TimestampableEntity;
     use SoftDeleteableEntity;
@@ -25,34 +25,18 @@ class ProductModel
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=20)
      */
     private $label;
 
     /**
      * @Gedmo\Slug(fields={"label"})
-     * @ORM\Column(type="string", length=125, unique=true)
+     * @ORM\Column(type="string", length=25, unique=true)
      */
     private $slug;
 
     /**
-     * @ORM\Column(type="string", length=50)
-     */
-    private $reference;
-
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $price;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="models")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $product;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Filter", inversedBy="productModels")
+     * @ORM\OneToMany(targetEntity="App\Entity\Filter", mappedBy="category", orphanRemoval=true)
      */
     private $filters;
 
@@ -83,42 +67,6 @@ class ProductModel
         return $this->slug;
     }
 
-    public function getReference(): ?string
-    {
-        return $this->reference;
-    }
-
-    public function setReference(string $reference): self
-    {
-        $this->reference = $reference;
-
-        return $this;
-    }
-
-    public function getPrice(): ?float
-    {
-        return $this->price;
-    }
-
-    public function setPrice(float $price): self
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    public function getProduct(): ?Product
-    {
-        return $this->product;
-    }
-
-    public function setProduct(?Product $product): self
-    {
-        $this->product = $product;
-
-        return $this;
-    }
-
     /**
      * @return Collection|Filter[]
      */
@@ -131,6 +79,7 @@ class ProductModel
     {
         if (!$this->filters->contains($filter)) {
             $this->filters[] = $filter;
+            $filter->setCategory($this);
         }
 
         return $this;
@@ -140,6 +89,10 @@ class ProductModel
     {
         if ($this->filters->contains($filter)) {
             $this->filters->removeElement($filter);
+            // set the owning side to null (unless already changed)
+            if ($filter->getCategory() === $this) {
+                $filter->setCategory(null);
+            }
         }
 
         return $this;
